@@ -79,10 +79,10 @@ p.lead { margin: 0 0 4px; color: var(--muted); font-size: 14.5px; }
 .sig-box canvas { display: block; width: 100%; height: 100%; touch-action: none; }
 .sig-hint {
   position: absolute;
-  left: 0; right: 0; bottom: 100%;
-  margin-bottom: 2px;
-  font-size: 11px; color: var(--gold);
+  left: 4px; top: 2px;
+  font-size: 10px; color: var(--gold);
   font-weight: 600;
+  opacity: .8;
   pointer-events: none;
 }
 

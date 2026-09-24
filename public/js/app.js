@@ -6,9 +6,10 @@
   var PAGE_H = 792;
 
   // Signature box on page 2, in PDF points, top-left origin (matches pdf.js viewport space at scale 1).
-  // Sits in the gap between the "Signature" label (ends ~453) and the ruled line itself
-  // (measured at ~483.5), so the drawn signature sits above the line rather than straddling it.
-  var BOX = { x0: 360, y0: 454, x1: 519, y1: 482 };
+  // The gap between the "Signature" label (ends ~453.2) and the ruled line itself (measured at
+  // ~483.5) is only ~30pt tall, so height is maxed out to fill that gap; width is widened past
+  // the line's own span for a bigger, easier target, without crossing into either neighbor.
+  var BOX = { x0: 350, y0: 453, x1: 529, y1: 483 };
 
   var statusEl = document.getElementById('statusEl');
   var downloadBtn = document.getElementById('downloadBtn');
