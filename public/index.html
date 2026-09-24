@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14213d">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Lease Agreement — Sign</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <img class="brand-logo" src="img/logo.png" alt="Righteous and Son Inc">
+      <div class="brand-text">
+        <div class="brand-title">Truck Lease Agreement</div>
+        <div class="brand-step">Righteous and Son Inc</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Sign the lease agreement</h1>
+      <p class="lead">Everything below is the original document — nothing on it has been changed. Draw your signature in the highlighted box on page 2, then download your signed copy.</p>
+    </div>
+
+    <div class="card">
+      <div class="pdf-page-wrap" id="pageWrap1">
+        <canvas class="page-canvas" id="pageCanvas1"></canvas>
+      </div>
+      <div class="pdf-page-wrap" id="pageWrap2">
+        <canvas class="page-canvas" id="pageCanvas2"></canvas>
+        <div class="sig-box" id="sigBox">
+          <span class="sig-hint">Sign here</span>
+          <canvas id="sigCanvas"></canvas>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-secondary" id="clearBtn">Clear signature</button>
+      </div>
+
+      <label class="checkline">
+        <input type="checkbox" id="agreeBox">
+        <span>By checking this box and signing above, I (Adam L Ramon) agree to electronically sign this lease agreement and confirm all information in it is accurate.</span>
+      </label>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-submit" id="downloadBtn" disabled>Sign &amp; download PDF</button>
+        <button type="button" class="btn btn-primary" id="shareBtn" hidden>Share PDF</button>
+      </div>
+
+      <div class="status" id="statusEl"></div>
+    </div>
+  </main>
+
+  <footer>Signed locally in your browser. The document is never uploaded anywhere.</footer>
+
+  <script src="vendor/pdfjs/pdf.min.js"></script>
+  <script src="vendor/pdf-lib/pdf-lib.min.js"></script>
+  <script src="js/signature.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
