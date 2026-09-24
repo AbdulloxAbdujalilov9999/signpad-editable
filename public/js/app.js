@@ -6,9 +6,9 @@
   var PAGE_H = 792;
 
   // Signature box on page 2, in PDF points, top-left origin (matches pdf.js viewport space at scale 1).
-  // Sized to match the Carrier's own signature on the left (roughly 46pt tall), so the pad is
-  // comfortable to draw in and the stamped signature looks like a natural signature, not a thin sliver.
-  var BOX = { x0: 360, y0: 454, x1: 519, y1: 497 };
+  // Sits in the gap between the "Signature" label (ends ~453) and the ruled line itself
+  // (measured at ~483.5), so the drawn signature sits above the line rather than straddling it.
+  var BOX = { x0: 360, y0: 454, x1: 519, y1: 482 };
 
   var statusEl = document.getElementById('statusEl');
   var downloadBtn = document.getElementById('downloadBtn');
